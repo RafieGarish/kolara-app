@@ -1,0 +1,4 @@
+/* Team screen extras: shadcn-specific overrides */
+.tm-card .tm-item .row-more { background: none }
+.tm-row .inv-actions .btn, .tm-row .inv-actions button { height: 30px; font-size: 12px; padding: 0 10px }
+.menu-check { margin-left: auto }

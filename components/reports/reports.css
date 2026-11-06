@@ -1,0 +1,4 @@
+/* Reports – small shims for Radix/shadcn markup */
+#view-reports .rp-prog .bar > [data-slot="progress-indicator"] { background: var(--green-fill); }
+#view-reports .rp-prog .bar.risk > [data-slot="progress-indicator"] { background: var(--amber); }
+#view-reports .dd-btn.set { border-color: var(--green); color: var(--green); }

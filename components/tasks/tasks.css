@@ -1,0 +1,6 @@
+/* My tasks – small overrides for Radix-rendered elements */
+#view-tasks .tl-item .c-name .chk { flex: none }
+#view-tasks .row-more { color: var(--ink-3) }
+#view-tasks .dd-btn[data-state="open"] { border-color: var(--line-2) }
+#view-tasks .tl-group { width: 100%; text-align: left }
+#view-tasks .pill-btn { display: inline-flex }

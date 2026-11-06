@@ -1,0 +1,3 @@
+.bar.risk > [data-slot="progress-indicator"] { background: var(--ink-3); opacity: .75 }
+.star.on svg { fill: currentColor }
+.p-lprog .bar { flex: 1 }

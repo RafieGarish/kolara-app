@@ -1,0 +1,2 @@
+/* Chat panel: only layers on top of the original .chat styles in kolara.css */
+.chat .cc-send:disabled { opacity: .5; cursor: default }

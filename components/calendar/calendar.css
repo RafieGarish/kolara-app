@@ -1,0 +1,3 @@
+/* Calendar-specific additions (flat-icon chips inside Radix buttons) */
+#view-calendar .ev svg { flex: none }
+#view-calendar .cal-cell { cursor: pointer }
