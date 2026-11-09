@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useLayoutEffect, useRef } from "react";
+import { useEffect, useRef } from "react";
 import { animate, inView, motion, useReducedMotion } from "framer-motion";
 
 /** Elements that fade/slide up when they scroll into view. */
@@ -10,8 +10,6 @@ const REVEAL = [
 ].join(",");
 
 const EASE = [0.22, 1, 0.36, 1] as const;
-const useIsoLayoutEffect = typeof window === "undefined" ? useEffect : useLayoutEffect;
-
 /**
  * Wraps each route (via app/template.tsx): a soft page-enter transition plus
  * scroll-reveal with stagger for headers, KPI cards and cards.
@@ -20,8 +18,8 @@ export function PageMotion({ children }: { children: React.ReactNode }) {
   const ref = useRef<HTMLDivElement>(null);
   const reduce = useReducedMotion();
 
-  // hide reveal targets before first paint so there is no flash
-  useIsoLayoutEffect(() => {
+  // Hide reveal targets after hydration so server and client markup stay identical.
+  useEffect(() => {
     if (reduce) return;
     ref.current?.querySelectorAll<HTMLElement>(REVEAL).forEach((el) => {
       el.style.opacity = "0";
