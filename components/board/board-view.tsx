@@ -16,6 +16,7 @@ import { useProjects } from "@/lib/stores/projects";
 import { MS_DAY, TODAY, d, dayDiff, dueLabel } from "@/lib/dates";
 import { PRIO_LABEL, PRIO_ORDER, PROJ_COLOR, STATUS_ORDER, type MyTask, type Priority, type TaskStatus } from "@/lib/types";
 import { notify } from "@/lib/toast";
+import DateDisplay from "@/components/date-display";
 
 const COLS: { id: TaskStatus; label: string; color: string }[] = [
   { id: "todo", label: "To do", color: "var(--ink-3)" },
@@ -71,7 +72,7 @@ export function BoardView() {
     };
     addTask(t);
     notify("Task added");
-  };
+  };  
 
   const total = visible.length;
   const doneN = visible.filter((t) => t.status === "done").length;
@@ -85,7 +86,7 @@ export function BoardView() {
           <p className="sub">See the flow. Move work forward, one card at a time.</p>
         </div>
         <div className="head-right">
-          <span className="today-date">Monday, November 2</span>
+          <span className="today-date"><DateDisplay /></span>
           <Button size="lg" onClick={() => setDlg(true)}><Icon name="plus" />New task</Button>
         </div>
       </section>

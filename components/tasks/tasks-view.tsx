@@ -23,6 +23,7 @@ import { TaskRow, type RowActions } from "./task-row";
 import { TaskBoard } from "./task-board";
 import { TaskSide } from "./task-side";
 import { TasksKpis } from "./tasks-kpis";
+import DateDisplay from "../date-display";
 
 const GROUP_LABEL = { due: "Due date", project: "Project", priority: "Priority", status: "Status" } as const;
 
@@ -206,7 +207,7 @@ export function TasksView() {
           <p className="sub">A little focus. A lot of progress. Here’s what’s on your plate, Jamie.</p>
         </div>
         <div className="head-right">
-          <span className="today-date">Monday, November 2</span>
+          <span className="today-date"><DateDisplay/></span>
           <Button
             size="lg"
             onClick={() => {

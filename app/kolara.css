@@ -95,6 +95,10 @@ svg {
 }
 
 /* ---------- Sidebar ---------- */
+.page-motion.page-motion-ready :is(.page-head, .tabs-row, .t-tabs-row, .p-toolbar, .cal-filters, .kb-toolbar, .kpi, .card, .ins-card, .rep-card, .cal-card, .p-banner, .p-meta):not([data-page-motion-revealed="true"]) {
+  opacity: 0;
+}
+
 .sidebar {
   width: var(--sidebar-w);
   flex: none;
