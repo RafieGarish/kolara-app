@@ -39,7 +39,7 @@ export function Sidebar() {
 
   return (
     <aside className={cn("sidebar", sidebarCollapsed && "collapsed", sidebarOpen && "open")} id="sidebar">
-      <div className="brand">
+      <div className="brand [@media(max-width:860px)]:gap-2 [@media(max-width:860px)]:px-0">
         <span className="brand-logo">
           {/* <Icon name="layers-logo" /> */}
           <Image
@@ -49,7 +49,17 @@ export function Sidebar() {
             alt="Picture of the author"
           />
         </span>
-        <span className="brand-name">Kolara.app</span>
+        <span className="brand-name [@media(max-width:860px)]:text-xl">Kolara.app</span>
+        <Button
+          type="button"
+          variant="ghost"
+          size="icon"
+          className="ml-auto hidden [@media(max-width:860px)]:inline-flex"
+          aria-label="Close sidebar"
+          onClick={() => setSidebarOpen(false)}
+        >
+          <Icon name="x" size={18} />
+        </Button>
       </div>
 
       <button className="workspace" type="button">
