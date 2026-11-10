@@ -30,7 +30,6 @@ Antarmuka juga memiliki sidebar responsif, notifikasi, dialog, serta animasi tra
 Persyaratan: Node.js 20.9 atau lebih baru dan npm.
 
 ```bash
-npm ci
 npm run dev
 ```
 

@@ -18,6 +18,7 @@ import { ROLES, useTeam } from "@/lib/stores/team";
 import { useProjects } from "@/lib/stores/projects";
 import type { Member } from "@/lib/types";
 import "./team.css";
+import DateDisplay from "../date-display";
 
 type Tab = "members" | "workload" | "invites";
 type Sort = "joined" | "name" | "workload";
@@ -141,7 +142,7 @@ export function TeamView() {
           <p className="sub">Good people. Shared momentum. A little clarity for everyone.</p>
         </div>
         <div className="head-right">
-          <span className="today-date">Monday, November 2</span>
+          <span className="today-date"><DateDisplay/></span>
           <Button size="lg" onClick={() => setInviteOpen(true)}><Icon name="plus" />Invite teammates</Button>
         </div>
       </section>

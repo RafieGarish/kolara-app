@@ -18,6 +18,7 @@ import { PROJ_COLOR, type Project } from "@/lib/types";
 import { useProjects } from "@/lib/stores/projects";
 import { useTasks } from "@/lib/stores/tasks";
 import { ProjectCard, ProjectRow, pLabel, pPct, type ProjActions } from "./project-parts";
+import DateDisplay from "../date-display";
 
 type Tab = "active" | "favorites" | "archived";
 type Sort = "due" | "progress" | "name";
@@ -158,7 +159,7 @@ export function ProjectsView() {
           <p className="sub">One shared view. Every project moving forward.</p>
         </div>
         <div className="head-right">
-          <span className="today-date">Monday, November 2</span>
+          <span className="today-date"><DateDisplay/></span>
           <Button size="lg" onClick={() => setCreating(true)}><Icon name="plus" />New project</Button>
         </div>
       </section>

@@ -23,6 +23,7 @@ import {
   type CalFilters,
 } from "./cal-utils";
 import { EventDetail, EventForm, type DetailAction } from "./event-dialogs";
+import DateDisplay from "@/components/date-display";
 
 type View = "month" | "week" | "day";
 
@@ -303,7 +304,7 @@ export function CalendarView() {
           <p className="sub">A shared rhythm. Every deadline, milestone, and moment together.</p>
         </div>
         <div className="head-right">
-          <span className="today-date">Monday, November 2</span>
+          <span className="today-date"><DateDisplay /></span>
           <Button size="lg" onClick={() => setFormDate(view === "month" && anchor.getMonth() === TODAY.getMonth() ? TODAY : anchor)}>
             <Icon name="plus" />New event
           </Button>
