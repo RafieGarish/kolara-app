@@ -13,7 +13,7 @@ import { notify } from "@/lib/toast";
 import Image from 'next/image'
 
 const NAV = [
-  { id: "overview", href: "/", label: "Overview", icon: "overview" },
+  { id: "overview", href: "/overview", label: "Overview", icon: "overview" },
   { id: "tasks", href: "/tasks", label: "My tasks", icon: "tasks" },
   { id: "board", href: "/board", label: "Kanban Board", icon: "board" },
   { id: "projects", href: "/projects", label: "Projects", icon: "folder" },

@@ -9,7 +9,8 @@ import { useUi } from "@/lib/stores/ui";
 import { ThemeSwitch } from "./theme-switch";
 
 const TITLES: Record<string, string> = {
-  "/": "Overview",
+  "/": "Landing",
+  "/overview": "Overview",
   "/tasks": "My tasks",
   "/board": "Board",
   "/projects": "Projects",
