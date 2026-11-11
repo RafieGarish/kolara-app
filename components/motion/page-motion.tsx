@@ -22,6 +22,7 @@ export function PageMotion({ children }: { children: React.ReactNode }) {
   useEffect(() => {
     const root = ref.current;
     if (!root || reduce) return;
+    root.classList.add("page-motion");
     root.classList.add("page-motion-ready");
     const els = Array.from(root.querySelectorAll<HTMLElement>(REVEAL));
     let seen = 0;
@@ -49,6 +50,7 @@ export function PageMotion({ children }: { children: React.ReactNode }) {
     return () => {
       window.clearTimeout(t);
       stops.forEach((s) => s());
+      root.classList.remove("page-motion");
       root.classList.remove("page-motion-ready");
       els.forEach((el) => {
         delete el.dataset.pageMotionRevealed;
@@ -61,8 +63,7 @@ export function PageMotion({ children }: { children: React.ReactNode }) {
   return (
     <motion.div
       ref={ref}
-      className="page-motion"
-      initial={reduce ? false : { opacity: 0, y: 10 }}
+      initial={false}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.35, ease: EASE }}
       style={{ width: "100%" }}

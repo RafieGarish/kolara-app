@@ -64,6 +64,16 @@ public/               Aset statis
 
 Route didefinisikan melalui `page.tsx` di dalam direktori `app`. Shell aplikasi bersama, provider tema, dan metadata diletakkan di `app/layout.tsx`.
 
+## Google OAuth
+
+Salin `.env.example` menjadi `.env.local`, lalu isi nilai Google OAuth dan secret aplikasi.
+Di Google Cloud Console, tambahkan redirect URI berikut:
+
+`http://localhost:3000/api/auth/callback/google`
+
+Jangan commit `.env.local` atau membagikan `GOOGLE_CLIENT_SECRET`. Tombol Google akan
+menampilkan pesan konfigurasi jika credential belum tersedia.
+
 ## Catatan data
 
 Proyek ini saat ini berfungsi sebagai prototipe frontend. Data awal disediakan secara lokal di `lib/data` dan `lib/stores`, lalu perubahan disimpan di state aplikasi selama sesi berjalan. Belum ada backend, database, autentikasi, atau penyimpanan persisten lintas sesi. Chat menggunakan balasan simulasi; ekspor laporan membuat file CSV langsung di browser.

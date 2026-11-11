@@ -99,8 +99,8 @@ export function LandingPage() {
           <a href="#untuk-siapa">Untuk tim</a>
         </nav>
         <div className="landing-actions">
-          <Link href="/overview" className="landing-login">Masuk</Link>
-          <Link href="/overview" className="landing-start">Daftar gratis <span>→</span></Link>
+          <Link href="/login" className="landing-login">Masuk</Link>
+          <Link href="/register" className="landing-start">Daftar gratis <span>→</span></Link>
         </div>
       </header>
 
@@ -109,7 +109,7 @@ export function LandingPage() {
         <h1>Plan better,<br /><span>work smarter.</span></h1>
         <p>Satukan proyek, tugas, dan percakapan tim dalam satu tempat. Dengan Kolara, setiap langkah punya arah yang jelas.</p>
         <div className="landing-hero-actions">
-          <Link href="/overview" className="landing-primary">Mulai gratis <span>→</span></Link>
+          <Link href="/register" className="landing-primary">Mulai gratis <span>→</span></Link>
           <a href="#fitur" className="landing-secondary">Jelajahi Kolara</a>
         </div>
         <div className="landing-trust"><span>✓ Tanpa kartu kredit</span><span>✓ Siap dalam hitungan menit</span></div>
@@ -149,12 +149,12 @@ export function LandingPage() {
 
       <section className="landing-cta" id="untuk-siapa">
         <div><small>LANGKAH BESAR DIMULAI DI SINI</small><h2>Proyek berikutnya,<br /><span>mulai bersama Kolara.</span></h2><p>Beri ide dan timmu tempat untuk tumbuh. Gratis untuk memulai.</p></div>
-        <div><Link href="/overview" className="landing-cta-button">Daftar & mulai gratis <span>→</span></Link><small>Sudah punya akun? <Link href="/overview">Masuk</Link></small></div>
+        <div><Link href="/register" className="landing-cta-button">Daftar & mulai gratis <span>→</span></Link><small>Sudah punya akun? <Link href="/login">Masuk</Link></small></div>
       </section>
 
       <footer className="landing-footer">
         <div><Logo /><p>Lebih terarah dalam bekerja.<br />Lebih dekat dalam berkolaborasi.</p></div>
-        <div className="landing-footer-links"><div><strong>Jelajahi</strong><a href="#fitur">Fitur</a><a href="#cara-kerja">Cara kerja</a><a href="#untuk-siapa">Untuk tim</a></div><div><strong>Dukungan</strong><a href="#">Pusat bantuan</a><a href="#">Hubungi kami</a><a href="#">halo@kolara.id</a></div><div><strong>Mulai bersama</strong><Link href="/overview">Daftar gratis</Link><Link href="/overview">Masuk</Link></div></div>
+        <div className="landing-footer-links"><div><strong>Jelajahi</strong><a href="#fitur">Fitur</a><a href="#cara-kerja">Cara kerja</a><a href="#untuk-siapa">Untuk tim</a></div><div><strong>Dukungan</strong><a href="#">Pusat bantuan</a><a href="#">Hubungi kami</a><a href="#">halo@kolara.id</a></div><div><strong>Mulai bersama</strong><Link href="/register">Daftar gratis</Link><Link href="/login">Masuk</Link></div></div>
         <div className="landing-footer-bottom"><span>© 2026 Kolara. Tumbuh bersama, langkah lebih baik.</span><span>Kebijakan privasi &nbsp;&nbsp;&nbsp; Syarat penggunaan</span></div>
       </footer>
     </main>

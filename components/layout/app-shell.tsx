@@ -15,7 +15,7 @@ export function AppShell({ children }: { children: React.ReactNode }) {
   const pathname = usePathname();
   // sidebar state is read in <Sidebar/>; keep the shell a thin layout container
   void useUi;
-  if (pathname === "/") return <>{children}</>;
+  if (pathname === "/" || pathname === "/login" || pathname === "/register") return <>{children}</>;
 
   return (
     <>
